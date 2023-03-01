@@ -1,0 +1,99 @@
+@import "mixins";
+.quality{
+  background-color: #F7F5EF;
+  position: relative;
+  z-index: 1;
+  padding: 40px 170px;
+  display: flex;
+  align-items: center;
+  @include md{
+    padding: 20px 70px;
+  }
+  @include sm{
+    padding: 20px 20px;
+  }
+}
+.quality-background{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  background-image: url("../assets/img/quality-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-color: #FDFDFB;
+}
+.swiper{
+  @include md{
+    display: none;
+  }
+}
+.swiper-slide{
+  img{
+    width: 90%;
+  }
+}
+.swiper-slide.swiper-slide-active{
+  margin-right: 1px;
+}
+.swiper-arrows{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  position: static;
+  color: #1B1A17;
+  &:after{
+    font-size: 25px;
+  }
+}
+.quality-content{
+  padding-top: 90px;
+  z-index: 2;
+  h1{
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+    color: #1B1A17;
+    margin-bottom: 38px;
+  }
+  p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #444240;
+    margin-bottom: 45px;
+  }
+  button{
+    background-color: #D4B098;
+    padding: 26px 38px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+  }
+  @include md{
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 14px;
+    }
+    button{
+      padding: 10px 15px;
+    }
+  }
+}
